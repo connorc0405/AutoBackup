@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 dir="$(dirname "$0")"
 
 cp $dir/autobackup /usr/local/bin/
