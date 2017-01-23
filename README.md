@@ -20,5 +20,5 @@ Double click on install.command OR navigate to the AutoBackup directory and exec
 
 Double click on uninstall.command OR navigate to the AutoBackup directory and execute
 ```
-./remove.command
+./uninstall.command
 ```
