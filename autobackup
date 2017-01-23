@@ -1,0 +1,16 @@
+#!/bin/bash
+
+function get_uuid {
+	tmutil destinationinfo | grep -oE '[^ ]+$' | sed -n '2,2p'
+}
+
+function check_mount_and_backup() {
+	if mount | grep "on /Volumes/$1" > /dev/null; then
+    	tmutil startbackup
+	else
+    	exit
+	fi
+}
+
+uuid=$(get_uuid)
+check_mount_and_backup $uuid
